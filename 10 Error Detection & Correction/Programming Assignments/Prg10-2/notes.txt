@@ -1,0 +1,17 @@
+#Prg10-2. - A program to simulate the calculation of traditional checksum.
+
+Analysis -
+
+#Sender side
+
+dataword = m bits (m bit units)
+checksum = 1 bits (extra m bit unit)
+codeword = n bits = dataword + checksum 
+;checksum not necessary to add at the end only
+;checksum calculated = one's complement addition of m bits data units
+
+#Reciver side
+
+checksum = calculate by received_codeword
+if checksum == 0 then accepted else rejected
+;;checksum calculated = one's complement addition of m bits received_codeword units
