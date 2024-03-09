@@ -1,0 +1,19 @@
+#Prg10-1. - A programm to simulate the calculation of CRC.
+
+Analysis -
+
+Sender Side -
+
+dataword = k bit
+codeword = n bit
+divisor  = n-k+1 bit (For generate redundant bit)
+codeword = dataword + (augmented dataword % divisor)
+
+Receiver Side -
+
+syndrome = n-k bit
+syndrome = codeword % divisor
+if syndrome = 0 --> accept else reject dataword
+
+
+
