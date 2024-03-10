@@ -1,0 +1,5 @@
+Applet #10.1 - Parity Check Applet:
+
+Implement a Java applet that allows users to input binary data and 
+then performs parity checks (either even or odd) to detect errors. 
+The applet should indicate whether the data contains errors or not.
