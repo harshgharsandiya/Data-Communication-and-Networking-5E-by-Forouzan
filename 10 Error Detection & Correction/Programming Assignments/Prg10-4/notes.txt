@@ -1,0 +1,22 @@
+Program #10-4. A program to simulate the calculation of Adler checksum.
+
+Checksum = 32 bit
+
+Similar to Fletcher with 3 differences
+
+1. Calculation done on single byte instead of 2 byte at a time.
+
+2. Modulos is prime number (65,521) instead of 65,536.
+
+3. R is initialized to 1 instead of 0.
+
+Checksum - For 16-bit -
+L: Left 16-bit checksum
+R: Right 16-bit checksum
+Di: Next 16-bit data itme
+
+R=1, L=0
+while more data:
+    R = (R+Di) mod 65521
+    L = (L+R) mod 65521
+checksum = (L*65536) + R
