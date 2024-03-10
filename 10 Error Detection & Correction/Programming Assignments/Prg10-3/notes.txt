@@ -1,0 +1,19 @@
+Program #10-3. A program to simulate the calculation of Fletcher checksum.
+
+L,R = accumulator
+8-bit Fletcher --> on 8 bit data item --> 16 bit checksum 
+calculation --> modulo 2^8 = 256 --> intermediate result divide by 256 and kept remainder
+
+16-bit Fletcher --> onn 16 bit data item --> 32 bit checksum
+calculation --> modulo 2^16 = 65,536
+
+Checksum - For 8-bit -
+L: Left 8-bit checksum
+R: Right 8-bit checksum
+Di: Next 8-bit data itme
+
+R,L = 0,0
+while more data:
+    R = (R+Di) mod 256
+    L = (L+R) mod 256
+checksum = (L*256) + R
