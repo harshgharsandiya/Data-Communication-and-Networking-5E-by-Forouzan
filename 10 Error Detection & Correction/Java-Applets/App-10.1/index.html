@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parity Check Applet</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Parity Check Applet</h1>
+        <form action="/check_parity" method="post">
+            <p>Enter Binary Data:</p>
+            <input type="text" name="binary_data" size="20">
+            <button type="submit">Check Parity</button> 
+        </form>
+        <div id="result">
+            {% if result %}
+                {{ result }}
+            {% endif %}
+        </div>
+    </body>
+</html>
